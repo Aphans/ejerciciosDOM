@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+    <head>
+    </head>
+    <body>
+        Texto: <input id="txt" type="text" name="texto"></input>
+        <button id="btt" type="button">Enviar</button>
+    <script>
+       var btnObj=document.getElementById("btt");
+            btnObj.onclick=function(){
+                console.log(document.getElementById("txt").value);
+                document.getElementById("txt").value = "";
+
+            };
+   </script>
+   </body>
+</html>

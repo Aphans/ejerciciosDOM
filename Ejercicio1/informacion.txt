@@ -1,0 +1,72 @@
+Ejercicio1: Busca información sobre los siguientes elementos del DOM:
+
+fistChild
+insertBefore
+preventDefault
+
+
+fistChild => La propiedad firstChild devuelve el primer nodo hijo del nodo especificado, como un objeto Node.
+             El espacio en blanco en el interior de elementos es considerado como texto, y el texto se considera como nodos .
+
+             Ejemplo:
+
+                Si tenemos esta lista:
+
+                    <ul id="myList">
+                        <li>Coffee</li>
+                        <li>Tea</li
+                    ul>
+
+                y ejecutamos este código:
+
+                    let list = document.getElementById("myList").firstChild.innerHTML;
+
+                    console.log(list);
+
+                Nos devuelve el primer elemento de el nodo, en este caso Coffee.
+
+
+insertBefore => La propiedad insertBefore inserta un nuevo nodo antes de un nodo existente como nodo hijo de un nodo padre.
+
+                 Ejemplo:
+                 
+                 Si tenemos esta lista:
+
+                 <ul identificación="menú">
+                    <li>Casa</li>   
+                    <li>Acerca de</li>
+                    <li>Contacto</li>
+                </ul>
+
+
+                Lo siguiente inserta un nuevo nodo antes del primer elemento de la lista:
+
+                dejar menú = document.getElementById ('menú');// crear un nuevo nodo 
+
+                dejar li = document.createElement('li'); //crear un nuevo elemento
+
+                li.textContent = 'Servicios'; //al nuevo elemento le asignamos un contexto
+
+                insertBefore(li,menu.firstElementChild); //finalmente lo añadimos al principio de la lista
+
+
+preventDefault => El preventDefault() cancela el evento si es cancelable, lo que significa que la acción predeterminada que pertenece al evento no ocurrirá.
+
+                  Ejemplo:
+                  
+                  Si tenemos un input de chequeo:
+
+                  <input type="checkbox" id="myCheckbox">
+
+                  Y ejecutamos la siguiente función:
+
+                  document.getElementById("myCheckbox").addEventListener("click", function(event){
+                         event.preventDefault()
+                  };
+
+                  No se podrá marcar la casilla de chequeo, ya que se cancela el evento y anula su función.
+
+
+
+
+
